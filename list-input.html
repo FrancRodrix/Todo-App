@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>user input list</title>
+    </head>
+    <style>
+        /* *{
+            background-image: linear-gradient(to right, rgba(39, 26, 26, 0.26), rgba(255, 230, 0, 0.596));     
+                     
+                  
+        } */
+        #form{
+            text-align: center;
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+            font-size:40px;
+        }
+          
+        #btn1{
+            background-color: greenyellow;
+            font-size:25px;
+            box-shadow: 3px 4px yellow;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+        }
+        #input1{
+            font-size: 25px;
+            background-color: white;
+            
+        }
+        #btn2{
+            font-weight: lighter;
+            margin-left: 60px;
+            padding: 5px;
+            margin-bottom: 25px;
+        }
+        li{
+           padding: 3px;
+           margin-top: 10px;
+           font-size: 23px;
+           color: indigo;
+           letter-spacing: 1px;
+           text-shadow: 1px 1px black;
+           font-weight: bold;
+           font-family: 'Times New Roman', Times, serif;
+           
+        }
+       
+
+
+    </style>
+    <body>
+        <div id="form">
+        <h1>ADDING ITEMS IN THE LIST</h1>
+        <label >ENTER THE INPUT:</label>
+        <input type="text" id="input1" >
+        <button type="button" id="btn1" value="sum">CLICK ME!!</button>
+
+        <div id="list1">
+            <div class="listItems">
+            <ul id="ul1">
+
+            </ul>
+        </div>
+            </div>
+        
+        </div>
+        <script>
+            var btn=document.getElementById('btn1'); 
+              btn.onclick=function(){
+                var input=document.getElementById("input1").value;
+                var ul=document.getElementById("ul1");
+                var li=document.createElement("LI");
+                var shiv= document.createTextNode(input);
+                 li.appendCh  ild(shiv);
+                 ul.appendChild(li);  
+                //  ul.style.backgroundColor="orange";
+                 ul.style.listStyleType="none";
+                 ul.style.textTransform="uppercase";  
+                 document.getElementById("input1").value=" " ;  
+                 
+             var dBtn = document.createElement("button");
+            dBtn.appendChild(document.createTextNode("CLEAR"));
+            li.appendChild(dBtn);
+
+
+            dBtn.onclick=function(){
+                li.innerHTML= " ";
+            } 
+          var t=  dBtn.setAttribute("id", "btn2");     
+           
+              } 
+             
+
+             
+           
+              
+             
+        </script>
+    </body>
+</html>
